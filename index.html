@@ -23,6 +23,7 @@
                 e.preventDefault(); // prevents page reloading
                 socket.emit('chat message', $('#m').val());
                 $('#m').val('');
+                $('#m').focus();
                 return false;
             });
             socket.on('chat message', function(msg){
